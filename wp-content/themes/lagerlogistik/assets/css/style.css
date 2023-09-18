@@ -1,0 +1,573 @@
+/*
+Theme Name: lagerlogistik
+*/
+@font-face {
+  font-family: Bebas;
+  src: url("fonts/Bebas/Bebas.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Evolventa;
+  src: url("fonts/Evolventa/Evolventa-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.contacts-header, .footer__nav-item, .footer-header, .why-us__icon, .mission__service-name, .main__more, .main__block-description, .nav-menu__container, .block-name, .info-header {
+  font-family: "Bebas";
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1pt;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: #043566;
+}
+
+p {
+  margin-top: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+header.block {
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 2.5%;
+}
+
+.container {
+  padding: 0;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.info-header {
+  font-size: 48px;
+  color: #043566;
+}
+
+.info-content {
+  font-family: "Evolventa";
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.col-12 {
+  padding: 0;
+}
+
+.row > * {
+  margin-top: 0;
+}
+
+.block {
+  width: 80%;
+  margin: 5% auto 0 auto;
+}
+
+.block-name {
+  color: #043566;
+  font-size: 60px;
+  line-height: 64px;
+}
+
+.block-text {
+  font-family: "Evolventa";
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.nav-menu__container {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  padding-right: 0;
+  padding-left: 0;
+  color: #043566;
+}
+
+.nav-menu__content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-menu__logo {
+  width: 25%;
+}
+.nav-menu__logo > a img {
+  width: 100%;
+}
+
+.nav-menu__insta {
+  width: 3%;
+}
+.nav-menu__insta > a img {
+  width: 100%;
+}
+
+.nav-item.active {
+  font-weight: 700;
+}
+
+.navbar-toggler-icon {
+  background-image: url("img/menu.png");
+  border: none;
+}
+
+.main {
+  height: 75vh;
+}
+.main.block {
+  margin: 0 auto;
+}
+
+.main__body {
+  background-image: url("img/man-working.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.main__block-description {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.main__content {
+  padding: 20rem 0 5rem 0;
+  height: 100%;
+  gap: 10%;
+}
+
+.main__info {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: end;
+  background-color: #FFFFFF;
+  border-radius: 0px 10px 10px 0px;
+  padding: 50px 10px 50px 10px;
+}
+
+.main__block {
+  max-width: 30rem;
+}
+
+.main__more {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+  flex-direction: column;
+  color: #043566;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 50px;
+}
+.main__more > ul {
+  justify-content: end;
+  align-items: end;
+  gap: 5%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.main__about-us > li {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+.main__about-us > li:hover .main__about-us-item {
+  transition: 0.5s ease-in-out;
+  transform: translateY(-15px);
+}
+
+.main__about-us-item {
+  margin-left: 10px;
+}
+.main__about-us-item > img {
+  width: 90%;
+  height: 0.7rem;
+}
+
+.about-us {
+  height: 90vh;
+}
+
+.about-us__info {
+  justify-items: stretch;
+}
+
+.about-us__part-1, .about-us__part-2 {
+  gap: 5%;
+  height: 20rem;
+}
+
+.about-us__pt1-text, .about-us__pt2-text {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.about-us__part-2 {
+  margin-top: 5%;
+}
+
+.about-us__pt1-img {
+  background-image: url("img/storage.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.about-us__pt2-img {
+  background-image: url("img/storage1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.mission {
+  height: 75vh;
+}
+
+.mission__info {
+  flex-direction: row;
+  gap: 5%;
+}
+
+.mission__figure {
+  width: 100%;
+  height: 20rem;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission__figure-container {
+  background-image: url("img/figure.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 65%;
+}
+
+.mission__services-container {
+  gap: 5%;
+}
+.mission__services-container > * {
+  gap: 5%;
+}
+
+.mission__services-item {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 15rem;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 1.75px 7px 0px rgba(50, 77, 104, 0.168627451);
+}
+
+.mission__service-name {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+  height: 3rem;
+  color: #043566;
+}
+
+.mission__service-desc {
+  margin-top: 2.5%;
+  font-family: "Evolventa";
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.geo {
+  height: 60vh;
+}
+
+.geo__map {
+  height: 100%;
+}
+
+.geo__block-info {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.geo__block-content {
+  height: 70%;
+}
+
+.why-us {
+  height: 70vh;
+}
+
+.why-us__block > .row {
+  margin-bottom: 5%;
+}
+
+.why-us__icon {
+  color: #043566;
+  font-size: 60px;
+  line-height: 64px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.why-us__icon#item-1 {
+  background-image: url("img/Ellipse 7.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.why-us__icon#item-2 {
+  background-image: url("img/Ellipse 8.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.why-us__icon#item-3 {
+  background-image: url("img/Ellipse 9.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.why-us__icon#item-4 {
+  background-image: url("img/Ellipse 10.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.why-us__icon-text {
+  text-align: center;
+}
+
+.contact-form {
+  background-image: url("img/contacts.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 80vh;
+  margin-top: 5%;
+}
+
+.contact-form__body.block {
+  margin-top: 0;
+}
+
+.contact-form__content {
+  justify-content: space-between;
+}
+
+.contact-form__info {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.contact-form__block {
+  height: 75%;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.contact-form__form {
+  font-family: "Evolventa";
+  font-size: 20px;
+  line-height: 24px;
+  width: 80%;
+}
+.contact-form__form > * {
+  width: 100%;
+  padding: 0 !important;
+}
+.contact-form__form * > input {
+  box-shadow: 0px 1.75px 7px 0px rgba(50, 77, 104, 0.168627451);
+}
+
+.form-select {
+  box-shadow: 0px 1.75px 7px 0px rgba(50, 77, 104, 0.168627451);
+}
+
+.contact-form__button {
+  background-color: #043566;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.contact-form__contacts {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.contact-form__contacts-block {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 70%;
+  padding: 40px 0 40px 40px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.contact-form__block-content {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-header {
+  margin-bottom: 2.5%;
+}
+
+.contact-form__phone-icon {
+  background-image: url("img/phone.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 65% 100%;
+}
+
+.contact-form__mail-icon {
+  background-image: url("img/mail.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 75% 100%;
+}
+
+.contact-form__geo-icon {
+  background-image: url("img/geo.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+}
+
+.contact-form__contacs-container * > .contacts-header {
+  color: #043566;
+}
+.contact-form__contacs-container > .row {
+  margin-bottom: 5%;
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
+
+.footer-header {
+  font-size: 48px;
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer {
+  background-color: #043566;
+  height: 40vh;
+}
+
+.footer__container {
+  align-items: center;
+  margin-top: 0;
+  justify-content: space-between;
+}
+
+.footer__content {
+  justify-content: space-between;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer * > a {
+  color: #FFFFFF;
+}
+
+.footer__nav-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.footer__nav-item {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.footer__company-body {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100%;
+  justify-self: center;
+}
+
+.footer__company-info {
+  text-align: center;
+}
+
+.footer__company-desc {
+  font-family: "Evolventa";
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__contacs-text {
+  margin-bottom: 5%;
+}
+
+.footer__contacs-container > .row {
+  margin-bottom: 5%;
+}
+
+.contacts-header {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: lighter;
+}
+
+.contacts-text {
+  font-family: "Evolventa";
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__phone-icon {
+  background-image: url("img/phone-white.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+}
+
+.footer__mail-icon {
+  background-image: url("img/mail-white.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+}/*# sourceMappingURL=style.css.map */

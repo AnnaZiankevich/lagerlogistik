@@ -1,0 +1,645 @@
+/*
+Theme Name: lagerlogistik
+*/
+
+
+//-----------------------------------Fonts-------------------------------------------
+@import "fonts";
+
+$family-bebas: "Bebas";
+$family-evolventa: "Evolventa";
+$main-font-size: 20px;
+$main-line-height: 24px;
+
+%accent-font {
+    font-family: $family-bebas;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1pt;
+}
+
+%main-font {
+    font-weight: 300;
+    font-size: $main-font-size;
+    line-height: $main-line-height;
+}
+
+@mixin nav-text {
+    @extend %accent-font;
+    font-weight: 300;
+    font-size: $main-font-size;
+    line-height: $main-line-height; 
+}
+
+@mixin accent-text {
+    @extend %accent-font;
+    color: $accent-color;
+    font-size: 60px;
+    line-height: 64px; 
+}
+
+@mixin second-text{
+    @extend %accent-font;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: $main-line-height;
+}
+
+@mixin third-text{
+    @extend %accent-font;
+    font-size: 48px;
+}
+
+@mixin main-text {
+    font-family: $family-evolventa;
+    font-size: $main-font-size;
+    line-height: $main-line-height; 
+}
+
+@mixin second-main-text {
+    font-family: $family-evolventa;
+    font-size: 11px;
+    line-height: 13px; 
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Fonts-------------------------------------------
+
+$main-color: #FFFFFF;
+$accent-color: #043566;
+$text-color: #464B51;
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Animation-------------------------------------------
+
+$transition-animation: 0.5s ease-in-out;
+$transform-animation: translateY(-15px);
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Main styles-------------------------------------------
+
+$gap: 5%;
+
+body {
+    background-color: $main-color;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+p {
+    margin-top: $gap;
+}
+
+ul {
+    list-style: none;
+}
+
+header.block {
+    margin: 0 auto;
+}
+
+@mixin background-img ($img-url) {
+    background-image: $img-url;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.content {
+    margin-top: $gap / 2;
+}
+
+.container {
+    padding: 0;
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.info-header {
+    @include third-text;
+    color: $accent-color;
+}
+
+.info-content {
+    @include main-text;
+}
+
+.col-12 {
+    padding: 0;
+}
+
+.row > * {
+    margin-top: 0;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Blocks-------------------------------------------
+
+$border-radius: 10px;
+$box-shadow: 0px 1.75px 7px 0px #324D682B;
+
+@mixin align-content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.block {
+    width: 80%;
+    margin: $gap auto 0 auto;
+}
+
+.block-name {
+    @include accent-text;
+}
+
+.block-text {
+    @include main-text;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Nav-menu-------------------------------------------
+
+.nav-menu__container {
+    @include nav-text;
+    padding-right: 0; 
+    padding-left: 0;
+
+    color: $accent-color;
+}
+
+.nav-menu__content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu__logo {
+    width: 25%;
+
+    & > a img {
+        width: 100%;
+    }
+}
+
+.nav-menu__insta {
+    width: 3%;
+
+    & > a img {
+        width: 100%;
+    }
+}
+
+.nav-item.active {
+    font-weight: 700;
+}
+
+.navbar-toggler-icon {
+    background-image: url("img/menu.png");
+    border: none;
+}
+
+//-----------------------------------------------------------------------------------
+
+//************************************BLOCKS**************************************************
+
+//-----------------------------------Main-------------------------------------------
+
+.main {
+    height: 75vh;
+
+    &.block {
+        margin: 0 auto;
+    }
+}
+
+.main__body {
+    @include background-img(url("img/man-working.jpg"));
+    display: grid;  
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main__block-description {
+    @include second-text;
+}
+
+.main__content {
+    padding: 20rem 0 5rem 0;
+    height: 100%;
+    gap: $gap * 2;
+}
+
+.main__info {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: end;
+
+    background-color: $main-color;
+    border-radius: 0px $border-radius $border-radius 0px;
+    padding: 50px 10px 50px 10px;
+}
+
+.main__block {
+    max-width: 30rem;   
+}
+
+.main__more {
+    @include second-text;
+    flex-direction: column;
+    color: $accent-color;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 50px;
+
+    & > ul {
+        justify-content: end;
+        align-items: end;
+        gap: $gap;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+.main__about-us > li {
+    background-color: $main-color;
+    border-radius: $border-radius;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+
+    &:hover .main__about-us-item{
+        -webkit-transition: $transition-animation;
+        -moz-transition: $transition-animation;
+        -o-transition: $transition-animation;
+        transition: $transition-animation;
+
+        -webkit-transform: $transform-animation;
+        -moz-transform: $transform-animation;
+        -o-transform: $transform-animation;
+        -ms-transform: $transform-animation;
+        transform: $transform-animation;
+    }
+}
+
+.main__about-us-item {
+    margin-left: 10px;
+
+    & > img {
+        width: 90%;
+        height: 0.7rem;
+    }
+} 
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------About-us-------------------------------------------
+
+.about-us {
+    height: 90vh;
+}
+
+.about-us__info {
+    justify-items: stretch;
+}
+
+.about-us__part-1, .about-us__part-2 {
+    gap: $gap;
+    height: 20rem;
+}
+
+.about-us__pt1-text, .about-us__pt2-text {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.about-us__part-2 {
+    margin-top: $gap;
+}
+
+.about-us__pt1-img {
+    @include background-img(url("img/storage.jpg"));
+}
+
+.about-us__pt2-img {
+    @include background-img(url("img/storage1.jpg"));
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Mission-------------------------------------------
+
+.mission {
+    height: 75vh;
+}
+
+.mission__info {
+    flex-direction: row;
+    gap: $gap;
+}
+
+.mission__figure {
+    width: 100%;
+    height: 20rem;
+    margin-top: $gap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission__figure-container {
+    @include background-img(url("img/figure.png"));
+    height: 100%;
+    width: 65%;
+}
+
+.mission__services-container {
+    gap: $gap;
+
+    & > * {
+        gap: $gap;
+    }
+}
+
+.mission__services-item {
+    background-color: $main-color;
+    width: 100%;
+    height: 15rem;
+    padding: $gap;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+.mission__service-name {
+    @include second-text;
+    height: 3rem;
+    color: $accent-color;
+}
+
+.mission__service-desc {
+    margin-top: $gap / 2;
+    @include second-main-text;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Geo-------------------------------------------
+
+.geo {
+    height: 60vh;
+}
+
+.geo__map {
+    height: 100%;
+}
+
+.geo__block-info {
+    @include align-content;
+}
+
+.geo__block-content {
+    height: 70%;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Why-us-------------------------------------------
+
+.why-us {
+    height: 70vh;
+}
+
+.why-us__block > .row {
+    margin-bottom: $gap;
+}
+
+.why-us__icon {
+    @include accent-text;
+    @include align-content;
+
+    &#item-1 {
+        @include background-img(url("img/Ellipse 7.png"));
+    }
+    &#item-2 {
+        @include background-img(url("img/Ellipse 8.png"));
+    }
+    &#item-3 {
+        @include background-img(url("img/Ellipse 9.png"));
+    }
+    &#item-4 {
+        @include background-img(url("img/Ellipse 10.png"));
+    }
+}
+
+.why-us__icon-text {
+    text-align: center;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Contact-form-------------------------------------------
+
+.contact-form {
+    @include background-img(url("img/contacts.jpg"));
+    height: 80vh;
+    margin-top: $gap;
+}
+
+.contact-form__body.block {
+    margin-top: 0;
+}
+
+.contact-form__content {
+    justify-content: space-between;
+}
+
+.contact-form__info {
+    @include align-content;
+}
+
+.contact-form__block {
+    height: 75%;
+    padding: 30px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+}
+
+.contact-form__form {
+    @include main-text;
+    width: 80%;
+
+    & > * {
+        width: 100%;
+        padding: 0!important;
+    }
+
+    & *> input {
+        box-shadow: $box-shadow;
+    }
+}
+
+.form-select {
+    box-shadow: $box-shadow;
+}
+
+.contact-form__button {
+    background-color: $accent-color;
+    color: $main-color;
+    width: 100%;
+}
+
+.contact-form__contacts {
+    @include align-content;
+}
+
+.contact-form__contacts-block {
+    @include align-content;
+
+    height: 70%;
+    padding: 40px 0 40px 40px;
+    background-color: $main-color;
+    border-radius: $border-radius;
+}
+
+.contact-form__block-content {
+    @include align-content;
+    height: 100%;
+}
+
+.contact-header {
+    margin-bottom: $gap / 2;
+}
+
+.contact-form__phone-icon {
+    @include background-img(url("img/phone.png"));
+    background-size: 65% 100%;
+}
+
+.contact-form__mail-icon {
+    @include background-img(url("img/mail.png"));
+    background-size: 75% 100%;
+}
+
+.contact-form__geo-icon {
+    @include background-img(url("img/geo.png"));
+    background-size: 50% 100%;
+}
+
+.contact-form__contacs-container {
+
+    & *> .contacts-header {
+        color: $accent-color;
+    }
+
+    & > .row {
+        margin-bottom: $gap;
+    }
+}
+
+.wpcf7-spinner {
+    display: none!important;
+}
+
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------Footer-------------------------------------------
+
+.footer-header {
+    @include third-text;
+    color: $main-color;
+    font-weight: lighter;
+}
+
+.footer {
+    background-color: $accent-color;
+    height: 40vh;
+}
+
+.footer__container {
+    align-items: center;
+    margin-top: 0;
+    justify-content: space-between;
+}
+
+.footer__content {
+    justify-content: space-between;
+}
+
+.footer-text {
+    color: $main-color;
+    font-weight: lighter;
+}
+
+.footer *> a {
+    color: $main-color;
+}
+
+.footer__nav-body { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.footer__nav-item {
+    @include second-text;
+}
+
+.footer__company-body {
+    @include align-content;
+    height: 100%;
+    justify-self: center;
+}
+
+.footer__company-info {
+    text-align: center;
+}
+
+.footer__company-desc {
+    @include main-text;
+}
+
+.footer__contacs-text {
+    margin-bottom: $gap;
+}
+
+.footer__contacs-container > .row {
+    margin-bottom: $gap;
+}
+
+.contacts-header {
+    @include second-text;
+    font-weight: lighter;
+}
+
+.contacts-text {
+    @include main-text;
+}
+
+.footer__phone-icon {
+    @include background-img(url("img/phone-white.png"));
+    background-size: 70% 100%;
+}
+
+.footer__mail-icon {
+    @include background-img(url("img/mail-white.png"));
+    background-size: 70% 100%;
+}
+
+//-----------------------------------------------------------------------------------

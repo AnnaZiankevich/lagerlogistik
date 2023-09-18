@@ -1,0 +1,1 @@
+<img src="<?php bloginfo('template_url'); ?>/assets/img/arrow.png" />
